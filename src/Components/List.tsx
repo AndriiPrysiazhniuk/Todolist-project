@@ -3,6 +3,8 @@ import {PropsType} from "./Todolist";
 import {TsarButton} from "./TsarButton";
 
 export const List = (props: PropsType) => {
+
+
     return (
         <ul>
             {props.tasks.map((task) => {

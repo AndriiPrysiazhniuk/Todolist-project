@@ -12,10 +12,4 @@ export const TsarButton = ({title,callback}:PropsType) => {
     const onClickHandler=()=>{
     callback()
     }
-    return (
-        <div>
-            <button onClick={onClickHandler}>{title}</button>
-        </div>
-    );
-};
-
+    return (<button onClick={onClickHandler}>{title}</button>)}
