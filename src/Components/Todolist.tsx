@@ -4,6 +4,7 @@ import {List} from "./List";
 export type PropsType = {
     tasks: TasksArrType[]
     todoTitle: string
+    removeTask:(taskId:number)=>void
 }
 type TasksArrType = {
     id: number
@@ -11,6 +12,9 @@ type TasksArrType = {
     isDone: boolean
 }
 export const Todolist = (props: PropsType) => {
+
+
+
     return <div>
         <h3>{props.todoTitle}</h3>
         <div>
@@ -18,7 +22,7 @@ export const Todolist = (props: PropsType) => {
             <button>+</button>
         </div>
         <div>
-            <List tasks={props.tasks} todoTitle={props.todoTitle}/>
+            <List removeTask={props.removeTask} tasks={props.tasks} todoTitle={props.todoTitle}/>
         </div>
         <div>
             <button>All</button>
