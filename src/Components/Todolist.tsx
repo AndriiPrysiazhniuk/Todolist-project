@@ -25,18 +25,18 @@ export const Todolist = (props: PropsType) => {
             <button>+</button>
         </div>
         <div>
-            {/*<List  removeTask={props.removeTask} tasks={props.tasks} todoTitle={props.todoTitle}/>*/}
-            <ul>
-                {props.tasks.map((task) => {
-                    return (
-                        <li key={task.id}>
-                            <TsarButton title={'X'} callback={ ()=>props.removeTask(task.id)}/>
-                            <input type="checkbox" checked={task.isDone}/>
-                            <span>{task.title}</span>
-                        </li>
-                    )
-                })}
-            </ul>
+            <List filterTasks={props.filterTasks}  removeTask={props.removeTask} tasks={props.tasks} todoTitle={props.todoTitle}/>
+            {/*<ul>*/}
+            {/*    {props.tasks.map((task) => {*/}
+            {/*        return (*/}
+            {/*            <li key={task.id}>*/}
+            {/*                <TsarButton title={'X'} callback={ ()=>props.removeTask(task.id)}/>*/}
+            {/*                <input type="checkbox" checked={task.isDone}/>*/}
+            {/*                <span>{task.title}</span>*/}
+            {/*            </li>*/}
+            {/*        )*/}
+            {/*    })}*/}
+            {/*</ul>*/}
         </div>
         <div>
             <TsarButton title={'All'} callback={()=>props.filterTasks('All')}/>
