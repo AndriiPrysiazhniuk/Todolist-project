@@ -1,6 +1,5 @@
 import React from 'react';
-import {Simulate} from "react-dom/test-utils";
-import click = Simulate.click;
+
 type PropsType={
     title:string
     callback:()=>void
